@@ -1,11 +1,14 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import kepalaPengembanganSdm from "../assets/PSDM-01.png";
+import wakilKepalaPengembanganSdm from "../assets/PSDM-02.png";
+import sekretarisPengembanganSdm from "../assets/PSDM-03.png";
 
 export function DepartemenPengembanganSDMSection() {
   const pengurus = [
-    { nama: "Wakil Kepala Departemen", jabatan: "WAKIL KEPALA DEPARTEMEN PENGEMBANGAN SDM" },
-    { nama: "Kepala Departemen", jabatan: "KEPALA DEPARTEMEN PENGEMBANGAN SDM" },
-    { nama: "Sekretaris Departemen", jabatan: "SEKRETARIS DEPARTEMEN PENGEMBANGAN SDM" },
+    { nama: "Muhammad Reza Putra Prasetyo", jabatan: "WAKIL KEPALA DEPARTEMEN PENGEMBANGAN SDM", img: wakilKepalaPengembanganSdm },
+    { nama: "Dinda Aisa Selvira", jabatan: "KEPALA DEPARTEMEN PENGEMBANGAN SDM", img: kepalaPengembanganSdm },
+    { nama: "Muhammad Hilmi Arya Rafa", jabatan: "SEKRETARIS DEPARTEMEN PENGEMBANGAN SDM", img: sekretarisPengembanganSdm },
   ];
 
   return (
@@ -32,7 +35,11 @@ export function DepartemenPengembanganSDMSection() {
             className="bg-gradient-to-br from-amber-800 to-amber-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-amber-700 to-amber-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-amber-300 opacity-50" />
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />  
             </div>
             <div className="p-6 text-center">
               <p className="text-amber-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

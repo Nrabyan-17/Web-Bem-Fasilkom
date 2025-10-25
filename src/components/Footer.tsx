@@ -8,12 +8,15 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import logoFooter from "figma:asset/ce94480d22a45bd1889e1ba2f41098c295cd379d.png";
+import logoImage  from "../assets/bem.png";
+
+
 
 export function Footer() {
   const navigationLinks = [
     { name: "Beranda", href: "/" },
     { name: "Tentang Kami", href: "/#tentang" },
+    { name: "Program Kerja", href: "/#proker" },
     { name: "Berita", href: "/berita" },
     { name: "Struktur Organisasi", href: "/#struktur" },
     { name: "Hubungi Kami", href: "/hubungi-kami" },
@@ -44,7 +47,7 @@ export function Footer() {
             <div className="flex flex-col items-start gap-4">
               <div className="flex items-center gap-4">
                 <img
-                  src={logoFooter}
+                  src={logoImage}
                   alt="BEM Fasilkom Logo"
                   className="h-24 w-24 object-contain"
                 />

@@ -1,10 +1,13 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
-import kepalaBagianImg from "figma:asset/8dd86c2c6881f1c97082ecc58a969b3a42bdb2b9.png";
-import anggota1Img from "figma:asset/9e6eb2da1129fca289b6b6fed50d3dc74d26bb4e.png";
-import anggota2Img from "figma:asset/b3f9949fa97c57a51ad0f783832bf4f700759a12.png";
-import anggota3Img from "figma:asset/dc0c5e7c975f555e5f00b8988cff1a893f9d0f24.png";
-import anggota4Img from "figma:asset/f2b396ae134476e2ad6c57de54072905b433e57a.png";
+import kepalaBagianPublikasiImg  from "../assets/PUBINFO-01.jpg";
+import anggotaPublikasi1Img from "../assets/PUBINFO-02.jpg"; 
+import anggotaPublikasi2Img from "../assets/PUBINFO-03.jpg";
+import anggotaPublikasi3Img from "../assets/PUBINFO-04.jpg"; 
+import anggotaPublikasi4Img from "../assets/PUBINFO-05.jpg"; 
+
+
+
 
 export function PublikasiInformasiSection() {
   return (
@@ -31,8 +34,8 @@ export function PublikasiInformasiSection() {
         >
           <div className="relative h-80 bg-gradient-to-br from-orange-700 to-orange-800 overflow-hidden">
             <img 
-              src={kepalaBagianImg} 
-              alt="Kepala Bagian Publikasi & Informasi - Ishma Shetia Shahadatina" 
+              src={kepalaBagianPublikasiImg} 
+              alt="Kepala Bagian Publikasi & Informasi - Ishna Shetia Shahadatina" 
               className="w-full h-full object-cover object-[center_35%]"
             />
           </div>
@@ -41,7 +44,7 @@ export function PublikasiInformasiSection() {
               KEPALA BAGIAN
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Ishma Shetia Shahadatina
+              Ishna Shetia Shahadatina
             </p>
           </div>
         </motion.div>
@@ -56,7 +59,7 @@ export function PublikasiInformasiSection() {
         >
           <div className="relative h-80 bg-gradient-to-br from-orange-700 to-orange-800 overflow-hidden">
             <img 
-              src={anggota1Img} 
+              src={anggotaPublikasi1Img} 
               alt="Anggota Bagian Publikasi & Informasi - Tasya Kalimarensyia Br Sinaga" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -81,7 +84,7 @@ export function PublikasiInformasiSection() {
         >
           <div className="relative h-80 bg-gradient-to-br from-orange-700 to-orange-800 overflow-hidden">
             <img 
-              src={anggota2Img} 
+              src={anggotaPublikasi2Img} 
               alt="Anggota Bagian Publikasi & Informasi - Ester Blessia Tumanggor" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -110,8 +113,8 @@ export function PublikasiInformasiSection() {
           >
             <div className="relative h-80 bg-gradient-to-br from-orange-700 to-orange-800 overflow-hidden">
               <img 
-                src={anggota3Img} 
-                alt="Anggota Bagian Publikasi & Informasi - Cindy Auliya Lisaillin" 
+                src={anggotaPublikasi3Img} 
+                alt="Anggota Bagian Publikasi & Informasi - Farah Dzakiyah Yolanda" 
                 className="w-full h-full object-cover object-[center_35%]"
               />
             </div>
@@ -135,7 +138,7 @@ export function PublikasiInformasiSection() {
           >
             <div className="relative h-80 bg-gradient-to-br from-orange-700 to-orange-800 overflow-hidden">
               <img 
-                src={anggota4Img} 
+                src={anggotaPublikasi4Img} 
                 alt="Anggota Bagian Publikasi & Informasi - Elmy Gita Damayanti" 
                 className="w-full h-full object-cover object-[center_35%]"
               />

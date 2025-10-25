@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import logoImage from "figma:asset/ce94480d22a45bd1889e1ba2f41098c295cd379d.png";
+import logoImage from "../assets/bem.png";
 
 export function AboutSection() {
   return (
@@ -61,10 +61,10 @@ export function AboutSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
             >
-              <Link to="/tentang-kami">
+              <Link to="/tentang-kami" className="cursor-pointer">
                 <Button
                   variant="outline"
-                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-6 rounded-full transition-all duration-300"
+                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-6 rounded-full transition-all duration-300 cursor-pointer"
                 >
                   Selengkapnya
                 </Button>

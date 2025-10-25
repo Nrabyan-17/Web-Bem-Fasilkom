@@ -1,11 +1,14 @@
 import { motion } from "motion/react";
 import { Users, Target, Handshake } from "lucide-react";
+import ketuaHdkImg from "../assets/HDK-01.png";
+import wakilKetuaHdkImg from "../assets/HDK-02.png";
+import sekretarisDepartemenImg from "../assets/HDK-03.png";
 
 export function DepartemenHubunganKerjasamaSection() {
   const pengurus = [
-    { nama: "Wakil Kepala Departemen", jabatan: "WAKIL KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA" },
-    { nama: "Kepala Departemen", jabatan: "KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA" },
-    { nama: "Sekretaris Departemen", jabatan: "SEKRETARIS DEPARTEMEN HUBUNGAN & KERJASAMA" },
+    { nama: "Wakil Kepala Departemen", jabatan: "WAKIL KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA", img: wakilKetuaHdkImg },
+    { nama: "Kepala Departemen", jabatan: "KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA", img: ketuaHdkImg },
+    { nama: "Sekretaris Departemen", jabatan: "SEKRETARIS DEPARTEMEN HUBUNGAN & KERJASAMA", img: sekretarisDepartemenImg },
   ];
 
   return (
@@ -32,7 +35,12 @@ export function DepartemenHubunganKerjasamaSection() {
             className="bg-gradient-to-br from-teal-800 to-teal-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-teal-700 to-teal-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-teal-300 opacity-50" />
+              {/* <Users className="w-24 h-24 text-teal-300 opacity-50" /> */}
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />  
             </div>
             <div className="p-6 text-center">
               <p className="text-teal-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

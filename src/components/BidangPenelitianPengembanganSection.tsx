@@ -1,15 +1,23 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
 import { Button } from "./ui/button";
+import kepalaPenelitianPengembangan from "../assets/LITBANG-01.png";
+import wakilKepalaPenelitianPengembangan from "../assets/LITBANG-02.png";
+import sekretarisPenelitianPengembangan from "../assets/LITBANG-03.png";
+import anggotaPenelitianPengembangan1 from "../assets/LITBANG-04.png";
+import anggotaPenelitianPengembangan2 from "../assets/LITBANG-05.png";
+import anggotaPenelitianPengembangan3 from "../assets/LITBANG-06.png";
+
+
 
 export function BidangPenelitianPengembanganSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG PENELITIAN & PENGEMBANGAN" },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG PENELITIAN & PENGEMBANGAN" },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG PENELITIAN & PENGEMBANGAN" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN" },
+    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG PENELITIAN & PENGEMBANGAN", img: kepalaPenelitianPengembangan },
+    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG PENELITIAN & PENGEMBANGAN", img: wakilKepalaPenelitianPengembangan },
+    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG PENELITIAN & PENGEMBANGAN", img: sekretarisPenelitianPengembangan },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan1 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan2 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan3 },
   ];
 
   return (
@@ -36,7 +44,11 @@ export function BidangPenelitianPengembanganSection() {
             className="bg-gradient-to-br from-rose-800 to-rose-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-rose-700 to-rose-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-rose-300 opacity-50" />
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
             <div className="p-6 text-center">
               <p className="text-rose-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

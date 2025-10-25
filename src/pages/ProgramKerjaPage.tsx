@@ -6,11 +6,15 @@ import { Footer } from "../components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
+import { ChevronDown } from "lucide-react";
+import { AiOutlineSearch } from "react-icons/ai";
 import { prokerData, ProkerItem } from "../data/prokerData";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function ProgramKerjaPage() {
   const [activeFilter, setActiveFilter] = useState<"Semua" | "Pelayanan" | "Pengembangan" | "Segara" | "Refleksi">("Semua");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filters: Array<"Semua" | "Pelayanan" | "Pengembangan" | "Segara" | "Refleksi"> = [
     "Semua",
@@ -19,9 +23,13 @@ export function ProgramKerjaPage() {
     "Refleksi",
   ];
 
-  const filteredProker = activeFilter === "Semua" 
-    ? prokerData 
-    : prokerData.filter((item) => item.category === activeFilter);
+  // Filter berdasarkan kategori dan pencarian
+  const filteredProker = prokerData.filter((item) => {
+    const matchesCategory = activeFilter === "Semua" || item.category === activeFilter;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -36,15 +44,17 @@ export function ProgramKerjaPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-orange-500 mb-4" style={{ fontSize: "42px", fontWeight: 700 }}>
-              PROGRAM KERJA
-            </h1>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: "120px" }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="h-1 bg-orange-500 mx-auto mb-6"
-            />
+            <div className="inline-block">
+              <h1 className="text-orange-500 mb-2" style={{ fontSize: "42px", fontWeight: 700 }}>
+                PROGRAM KERJA
+              </h1>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-orange-500 mb-6"
+              />
+            </div>
             <p className="max-w-2xl mx-auto text-gray-600" style={{ fontSize: "15px" }}>
               Dengan program kerja yang dirancang untuk menyelenggarakan seluruh kewenangan dan
               memberikan kontribusi positif bagi lingkungan kampus dan masyarakat.
@@ -53,36 +63,91 @@ export function ProgramKerjaPage() {
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-8 bg-white">
+      {/* Search and Filter Section */}
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-3"
+            className="flex flex-col md:flex-row gap-4 justify-center items-center max-w-5xl mx-auto"
           >
-            {filters.map((filter) => (
-              <Button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                variant="outline"
-                className={`px-10 py-6 rounded-full transition-all duration-300 ${
-                  activeFilter === filter
-                    ? "bg-orange-500 text-white border-orange-500 hover:bg-orange-600 shadow-md"
-                    : "border-2 border-orange-400 text-orange-500 hover:bg-orange-50 bg-white"
-                }`}
-                style={{ fontSize: "14px", fontWeight: 500 }}
+            {/* Search Bar - Lebih Panjang */}
+            <div className="relative flex-1 max-w-2xl w-full">
+              <div className="absolute inset-y-0 pl-4 flex items-center pointer-events-none">
+                <AiOutlineSearch size={20} color="#9CA3AF" />
+              </div>
+              <input
+                type="text"
+                placeholder="Cari program kerja..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-orange-500 transition-colors duration-300"
+                style={{ fontSize: "14px", paddingLeft: "27px" }}
+              />
+            </div>
+
+            {/* Category Dropdown - Di sebelah kanan */}
+            <div className="relative flex-shrink-0">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                onBlur={() => setTimeout(() => setIsDropdownOpen(false), 100)}
+                className="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg shadow-md transition-all duration-300 flex items-center gap-3 min-w-[200px] w-full md:w-auto"
+                style={{ fontSize: "14px", fontWeight: 600 }}
               >
-                {filter}
-              </Button>
-            ))}
+                <span>Kategori: {activeFilter}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* Dropdown Menu */}
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50"
+                >
+                  {filters.map((filter) => (
+                    <button
+                      key={filter}
+                      onClick={() => {
+                        setActiveFilter(filter);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0 ${
+                        activeFilter === filter
+                          ? "bg-orange-50 text-orange-600"
+                          : "hover:bg-gray-50 text-gray-700"
+                      }`}
+                      style={{ fontSize: "14px" }}
+                    >
+                      {filter}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </div>
+          </motion.div>
+
+          {/* Results Summary */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-center mt-6"
+          >
+            <p className="text-gray-600 pt-4" style={{ fontSize: "14px" }}>
+              Menampilkan {filteredProker.length} program kerja
+              {searchQuery && ` untuk pencarian "${searchQuery}"`}
+              {activeFilter !== "Semua" && ` dalam kategori "${activeFilter}"`}
+            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Program Kerja Grid */}
-      <section className="py-12 pb-20 bg-gray-50">
+      <section className="py-12 pb-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
@@ -143,9 +208,29 @@ export function ProgramKerjaPage() {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <p className="text-gray-500" style={{ fontSize: "18px" }}>
-                Tidak ada program kerja dalam kategori ini.
-              </p>
+              <div className="max-w-md mx-auto">
+                <div className="mb-4 flex justify-center">
+                  <AiOutlineSearch size={64} color="#D1D5DB" />
+                </div>
+                <h3 className="text-gray-600 mb-2" style={{ fontSize: "18px", fontWeight: 600 }}>
+                  Tidak Ada Program Kerja Ditemukan
+                </h3>
+                <p className="text-gray-500" style={{ fontSize: "14px" }}>
+                  Coba ubah kata kunci pencarian atau pilih kategori yang berbeda.
+                </p>
+                {(searchQuery || activeFilter !== "Semua") && (
+                  <button
+                    onClick={() => {
+                      setSearchQuery("");
+                      setActiveFilter("Semua");
+                    }}
+                    className="mt-4 text-orange-500 hover:text-orange-600 underline"
+                    style={{ fontSize: "14px" }}
+                  >
+                    Reset Filter
+                  </button>
+                )}
+              </div>
             </motion.div>
           )}
         </div>

@@ -4,16 +4,16 @@ import { Button } from "./ui/button";
 import { ArrowRight, Circle } from "lucide-react";
 import { TypewriterText } from "./TypewriterText";
 import { CounterNumber } from "./CounterNumber";
-import heroImage from "figma:asset/d72c061ad81bdd13ae052edeeea3a1f4abf0e541.png";
+import  heroImage  from "../assets/build.jpg";
 
 export function HeroSection() {
   return (
     <section id="beranda" className="relative min-h-screen pt-24 pb-16 bg-gradient-to-br from-gray-50 via-orange-50/30 to-blue-50/20 overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl z-0" />
       
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 hero-section-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -70,24 +70,28 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4 pt-4"
+              className="flex flex-wrap gap-4 pt-4 relative z-10"
             >
-              <Link to="/program-kerja">
-                <Button
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
-                >
-                  Lihat Program Kerja
-                  <Circle className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link to="/tentang-kami">
-                <Button
-                  variant="outline"
-                  className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-6 rounded-lg transition-all duration-300"
-                >
-                  Tentang Kami
-                </Button>
-              </Link>
+              <div className="hero-button-wrapper">
+                <Link to="/program-kerja" className="cursor-pointer relative z-20">
+                  <Button
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer relative z-20 pointer-events-auto"
+                  >
+                    Lihat Program Kerja
+                    <Circle className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+              <div className="hero-button-wrapper">
+                <Link to="/tentang-kami" className="cursor-pointer relative z-20">
+                  <Button
+                    variant="outline"
+                    className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-6 rounded-lg transition-all duration-300 cursor-pointer relative z-20 pointer-events-auto"
+                  >
+                    Tentang Kami
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Statistics Section */}
@@ -147,6 +151,19 @@ export function HeroSection() {
                 src={heroImage} 
                 alt="BEM Fasilkom UPNVJT Building" 
                 className="w-full h-auto object-cover"
+                style={{ 
+                  minHeight: '300px', 
+                  backgroundColor: '#f0f0f0',
+                  // border: '2px solid #ddd'
+                }}
+                onError={(e) => {
+                  console.error('Hero image failed to load:', e.currentTarget.src);
+                  e.currentTarget.style.backgroundColor = '#ffebee';
+                }}
+                onLoad={(e) => {
+                  console.log('Hero image loaded successfully:', e.currentTarget.src);
+                  // e.currentTarget.style.border = '2px solid green';
+                }}
               />
             </motion.div>
           </motion.div>

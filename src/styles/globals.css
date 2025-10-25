@@ -187,3 +187,33 @@
 html {
   font-size: var(--font-size);
 }
+
+/* Custom styles for HeroSection buttons */
+.hero-button-wrapper {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.hero-button-wrapper button {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 21;
+}
+
+.hero-button-wrapper a {
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  display: inline-block;
+}
+
+/* Ensure no overlay elements interfere */
+.hero-section-container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section-container * {
+  pointer-events: auto;
+}

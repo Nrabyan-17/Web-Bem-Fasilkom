@@ -1,5 +1,8 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import kepalaHdk from "../assets/SOSPOL-01.png";
+import wakilKepalaHdk from "../assets/SOSPOL-02.png";
+import sekretarisHdk from "../assets/SOSPOL-03.png";
 
 export function DepartemenSospolSection() {
   return (
@@ -16,6 +19,7 @@ export function DepartemenSospolSection() {
 
       {/* Team Cards Grid - 3 Members */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+
         {/* Wakil Kepala Departemen */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,16 +29,18 @@ export function DepartemenSospolSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={wakilKepalaHdk} 
+              alt="Wakil Kepala Hdk - Rahma Allysia Putri" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              WAKIL KEPALA DEPARTEMEN
+              PROGRAM STUDI
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Wahyu Putra Pratama
+              Sains Data'22
             </p>
           </div>
         </motion.div>
@@ -48,16 +54,18 @@ export function DepartemenSospolSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={kepalaHdk} 
+              alt="Wakil Kepala HDK - Jumadil Prima Dani" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KEPALA DEPARTEMEN
+              PROGRAM STUDI
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Khrisna Arya Muda Yudha
+              Sistem Informasi'22
             </p>
           </div>
         </motion.div>
@@ -71,16 +79,18 @@ export function DepartemenSospolSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={sekretarisHdk} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS DEPARTEMEN
+              PROGRAM STUDI
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Yunita Istiqomah Dwi Rocsantin
+              Sistem Informasi'22
             </p>
           </div>
         </motion.div>

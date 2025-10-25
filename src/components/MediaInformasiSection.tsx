@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 import { Target, TrendingUp, Megaphone } from "lucide-react";
-import kepalaBiroImg from "figma:asset/ba4d6b0ebfc419f48880a45a962a0204d7506c81.png";
-import wakilKepalaBiroImg from "figma:asset/a25f6cfc26edb03385ae27946845786ac196d38f.png";
-import sekretarisBiroImg from "figma:asset/2099d5d23930b028156b98d59a3c3fa5adee15c8.png";
+import kepalaBiroImg from "../assets/MEDFO-01.png";
+import wakilKepalaBiroImg from "../assets/MEDFO-02.png";
+import sekretarisBiroImg from "../assets/MEDFO-03.png";
 
 export function MediaInformasiSection() {
   return (
@@ -19,30 +19,6 @@ export function MediaInformasiSection() {
 
       {/* Team Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {/* Kepala Biro */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-        >
-          <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden">
-            <img 
-              src={kepalaBiroImg} 
-              alt="Kepala Biro - Rayhan Gading Andri Purwanto" 
-              className="w-full h-full object-cover object-[center_35%]"
-            />
-          </div>
-          <div className="p-6 text-center">
-            <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KEPALA BIRO
-            </p>
-            <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Rayhan Gading Andri Purwanto
-            </p>
-          </div>
-        </motion.div>
 
         {/* Wakil Kepala Biro */}
         <motion.div
@@ -61,10 +37,35 @@ export function MediaInformasiSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              WAKIL KEPALA BIRO
+              PROGRAM STUDI
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Reno Naufal
+              Informatika'23
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Kepala Biro */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+        >
+          <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden">
+            <img 
+              src={kepalaBiroImg} 
+              alt="Kepala Biro - Rayhan Gading Andri Purwanto" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
+          </div>
+          <div className="p-6 text-center">
+            <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
+              PROGRAM STUDI
+            </p>
+            <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
+              Informatika'22
             </p>
           </div>
         </motion.div>

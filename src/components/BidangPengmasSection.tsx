@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import kepalaPengmas from "../assets/PENGMAS-01.png";
+import wakilKepalaPengmas from "../assets/PENGMAS-02.png";
+import sekretarisPengmas from "../assets/PENGMAS-03.png";
+import anggotaPengmas1 from "../assets/PENGMAS-04.png";
+import anggotaPengmas2 from "../assets/PENGMAS-05.png";
+import anggotaPengmas3 from "../assets/PENGMAS-06.png";
 
 export function BidangPengmasSection() {
   return (
@@ -25,9 +31,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+          <img 
+              src={kepalaPengmas} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -48,9 +56,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={wakilKepalaPengmas} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -71,9 +81,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={sekretarisPengmas} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -94,9 +106,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={anggotaPengmas1} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -117,9 +131,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={anggotaPengmas2} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -140,9 +156,11 @@ export function BidangPengmasSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={anggotaPengmas3} 
+              alt="Wakil Kepala Biro - Reno Naufal" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

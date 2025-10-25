@@ -5,8 +5,10 @@ import { Handshake, Users, BookOpen, TrendingUp, Lightbulb, Target, ArrowRight }
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
-import strukturOrganisasiImg from "figma:asset/eea5c48c5f1e8d19bdd647ecb6183be935eb5763.png";
-import maknaLogoImg from "figma:asset/a7760cafed0613db1cef2430682b129a28c3a879.png";
+
+import maknaLogoImg from "../assets/makna.png";
+import strukturOrganisasiImg from "../assets/struktur.png";
+
 
 export function AboutPage() {
   const functions = [
@@ -91,9 +93,18 @@ export function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-blue-600 mb-6" style={{ fontSize: "32px", fontWeight: 700 }}>
-              APA ITU BEM FASILKOM UPNVJT?
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-blue-600 mb-2" style={{ fontSize: "32px", fontWeight: 700 }}>
+                APA ITU BEM FASILKOM UPNVJT?
+              </h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-blue-600 mb-4"
+              />
+            </div>
             <p className="text-gray-900 mb-12 max-w-3xl" style={{ fontSize: "16px" }}>
               BEM FASILKOM UPNVJT merupakan Badan Eksekutif Mahasiswa yang memiliki 4 fungsi utama
               dalam membantu mahasiswa, khususnya di FASILKOM UPNVJT dalam berproses, diantaranya:
@@ -161,9 +172,18 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-orange-500 mb-4" style={{ fontSize: "32px", fontWeight: 700 }}>
-              TENTANG KAMI
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-orange-500 mb-2" style={{ fontSize: "32px", fontWeight: 700 }}>
+                TENTANG KAMI
+              </h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-orange-500 mb-4"
+              />
+            </div>
             <p className="text-gray-500 max-w-3xl mx-auto" style={{ fontSize: "16px" }}>
               Kontribusi kami dalam membangun fakultas yang lebih baik melalui kepemimpinan dan
               pelayanan.
@@ -219,9 +239,18 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-orange-500 mb-4" style={{ fontSize: "36px", fontWeight: 700 }}>
-              VISI <span className="text-orange-500">&</span> MISI
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-orange-500 mb-2" style={{ fontSize: "36px", fontWeight: 700 }}>
+                VISI <span className="text-orange-500">&</span> MISI
+              </h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-orange-500 mb-4"
+              />
+            </div>
             <p className="text-gray-600 max-w-2xl mx-auto" style={{ fontSize: "16px" }}>
               Komitmen kami dalam membangun fakultas yang lebih baik melalui kepemimpinan dan pelayanan.
             </p>
@@ -290,9 +319,18 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-orange-500 mb-4" style={{ fontSize: "36px", fontWeight: 700 }}>
-              STRUKTUR ORGANISASI
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-orange-500 mb-2" style={{ fontSize: "36px", fontWeight: 700 }}>
+                STRUKTUR ORGANISASI
+              </h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-orange-500 mb-4"
+              />
+            </div>
             <p className="text-gray-600 max-w-2xl mx-auto" style={{ fontSize: "16px" }}>
               Pusat informasi dan layanan terkait dari BEM Fakultas Ilmu Komputer untuk seluruh Keluarga Mahasiswa Fasilkom
             </p>
@@ -343,9 +381,18 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-orange-500 mb-4" style={{ fontSize: "36px", fontWeight: 700 }}>
-              MAKNA LOGO
-            </h2>
+            <div className="inline-block">
+              <h2 className="text-orange-500 mb-2" style={{ fontSize: "36px", fontWeight: 700 }}>
+                MAKNA LOGO
+              </h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="h-1 bg-orange-500 mb-4"
+              />
+            </div>
             <p className="text-gray-600 max-w-3xl mx-auto" style={{ fontSize: "16px" }}>
               Setiap elemen dalam logo kami memiliki filosofi dan makna yang mendalam, melambangkan harapan, semangat, dan inovasi baru dalam kepemimpinan BEM Fasilkom
             </p>
@@ -361,7 +408,7 @@ export function AboutPage() {
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
               <div className="mb-8 text-center">
                 <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto" style={{ fontSize: "16px", lineHeight: "1.8" }}>
-                  <span className="text-orange-500" style={{ fontWeight: 700 }}>Astranova</span> berasal dari kata <span style={{ fontWeight: 600 }}>Astra/Astro</span> (bintang) dan <span style={{ fontWeight: 600 }}>Nova</span> (baru), bermakna bintang baru yang melambangkan harapan, semangat dan inovasi baru dalam kepemimpinan BEM Fasilkom.
+                  
                 </p>
               </div>
 

@@ -28,8 +28,8 @@ export function ProkerDetailPage() {
           <h1 className="text-gray-900 mb-4" style={{ fontSize: "32px", fontWeight: 700 }}>
             Program Kerja Tidak Ditemukan
           </h1>
-          <Link to="/program-kerja">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+          <Link to="/program-kerja" className="cursor-pointer">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white cursor-pointer">
               Kembali ke Program Kerja
             </Button>
           </Link>

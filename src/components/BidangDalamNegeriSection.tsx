@@ -1,15 +1,21 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
 import { Button } from "./ui/button";
+import kepalaDagri from "../assets/DAGRI-01.png";
+import wakilKepalaDagri from "../assets/DAGRI-02.png";
+import sekretarisDagri from "../assets/DAGRI-03.png";
+import anggotaDagri1 from "../assets/DAGRI-04.png";
+import anggotaDagri2 from "../assets/DAGRI-05.png";
+import anggotaDagri3 from "../assets/DAGRI-06.png";
 
 export function BidangDalamNegeriSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG DALAM NEGERI" },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG DALAM NEGERI" },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG DALAM NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI" },
+    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG DALAM NEGERI", img: kepalaDagri },
+    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG DALAM NEGERI", img: wakilKepalaDagri },
+    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG DALAM NEGERI", img: sekretarisDagri },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri1 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri2 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri3 },
   ];
 
   return (
@@ -36,7 +42,11 @@ export function BidangDalamNegeriSection() {
             className="bg-gradient-to-br from-cyan-800 to-cyan-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-cyan-700 to-cyan-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-cyan-300 opacity-50" />
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
             <div className="p-6 text-center">
               <p className="text-cyan-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

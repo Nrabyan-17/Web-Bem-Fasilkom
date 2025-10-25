@@ -1,15 +1,22 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
 import { Button } from "./ui/button";
+import kepalaKaderisasi from "../assets/KADERISASI-01.png";
+import wakilKepalaKaderisasi from "../assets/KADERISASI-02.png";
+import sekretarisKaderisasi from "../assets/KADERISASI-03.png";
+import anggotaKaderisasi1 from "../assets/KADERISASI-04.png";
+import anggotaKaderisasi2 from "../assets/KADERISASI-05.png";
+import anggotaKaderisasi3 from "../assets/KADERISASI-06.png";
+
 
 export function BidangKaderisasiSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG KADERISASI" },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG KADERISASI" },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG KADERISASI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI" },
+    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG KADERISASI", img: kepalaKaderisasi },
+    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG KADERISASI", img: wakilKepalaKaderisasi },
+    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG KADERISASI", img: sekretarisKaderisasi },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi1 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi2 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi3 },
   ];
 
   return (
@@ -36,7 +43,11 @@ export function BidangKaderisasiSection() {
             className="bg-gradient-to-br from-violet-800 to-violet-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-violet-700 to-violet-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-violet-300 opacity-50" />
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
             <div className="p-6 text-center">
               <p className="text-violet-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

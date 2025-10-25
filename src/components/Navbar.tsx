@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import logoImage from "figma:asset/ce94480d22a45bd1889e1ba2f41098c295cd379d.png";
+import logoImage from "../assets/bem.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

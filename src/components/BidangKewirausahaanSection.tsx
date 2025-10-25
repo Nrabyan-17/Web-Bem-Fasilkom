@@ -1,5 +1,14 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import kepalaBidangKwu from "../assets/KWU-01.png";
+import wakilBidangKwu from "../assets/KWU-02.png";
+import sekreBidangKwu from "../assets/KWU-03.png";
+import anggotaBidangKwu1 from "../assets/KWU-04.png";
+import anggotaBidangKwu2 from "../assets/KWU-05.png";
+import anggotaBidangKwu3 from "../assets/KWU-06.png";
+
+
+
 
 export function BidangKewirausahaanSection() {
   return (
@@ -25,9 +34,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={kepalaBidangKwu} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -48,9 +59,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={wakilBidangKwu} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -71,9 +84,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+          <img 
+              src={sekreBidangKwu} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -94,9 +109,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+            <img 
+              src={anggotaBidangKwu1} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -117,9 +134,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+          <img 
+              src={anggotaBidangKwu2} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
@@ -140,9 +159,11 @@ export function BidangKewirausahaanSection() {
           className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           <div className="relative h-80 bg-gradient-to-br from-blue-700 to-blue-800 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-blue-600 flex items-center justify-center">
-              <Users className="w-16 h-16 text-blue-200" />
-            </div>
+          <img 
+              src={anggotaBidangKwu3} 
+              alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
+              className="w-full h-full object-cover object-[center_35%]"
+            />
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

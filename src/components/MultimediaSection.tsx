@@ -1,14 +1,14 @@
 import { motion } from "motion/react";
 import { Users, Film, Camera, Palette, Code } from "lucide-react";
 import { Button } from "./ui/button";
-import kepalaBagianImg from "figma:asset/62be395408043f18b0241e0c4fc8dd9d142c142a.png";
-import anggota1Img from "figma:asset/3e064007f50018b9d07d4ed54e02c90c026a2c75.png";
-import anggota2Img from "figma:asset/4dc5ab72d8aad8d6b272c8d27541600f3a19d2b4.png";
-import anggota3Img from "figma:asset/b3bb2a31be3c728e554663274ecf9697aace8b9d.png";
-import anggota4Img from "figma:asset/25bcca7f7489d18fce0ac19a937f87e7d69dd7f4.png";
-import anggota5Img from "figma:asset/df90d71784f70469fa2fe227f8762aa61129705b.png";
-import anggota6Img from "figma:asset/c25808b09db1eca7cd95035cac9a7105cac9deef.png";
-import anggota7Img from "figma:asset/d034b58134bfaec0ffa9282746a9fbec54abb776.png";
+import kepalaBagianMultimediaImg from "../assets/MULMED-01.jpg";
+import anggotaMultimedia1Img from "../assets/MULMED-02.jpg";
+import anggotaMultimedia2Img from "../assets/MULMED-03.jpg";
+import anggotaMultimedia3Img from "../assets/MULMED-04.jpg";
+import anggotaMultimedia4Img from "../assets/MULMED-05.jpg";
+import anggotaMultimedia5Img from "../assets/MULMED-06.jpg";
+import anggotaMultimedia6Img from "../assets/MULMED-07.jpg";
+import anggotaMultimedia7Img from "../assets/MULMED-08.jpg";
 
 export function MultimediaSection() {
   return (
@@ -35,7 +35,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={kepalaBagianImg} 
+              src={kepalaBagianMultimediaImg} 
               alt="Kepala Bagian Multimedia - Rachmananta Ibnu Fajar" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -60,7 +60,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota1Img} 
+              src={anggotaMultimedia1Img} 
               alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -85,7 +85,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota2Img} 
+              src={anggotaMultimedia2Img} 
               alt="Anggota Bagian Multimedia - Febbyna Aulia Putri" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -110,7 +110,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota3Img} 
+              src={anggotaMultimedia3Img} 
               alt="Anggota Bagian Multimedia - Marsyanda Firlyandita" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -135,7 +135,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota4Img} 
+              src={anggotaMultimedia4Img} 
               alt="Anggota Bagian Multimedia - Disain Ariesta Perdana Raharja" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -160,7 +160,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota5Img} 
+              src={anggotaMultimedia5Img} 
               alt="Anggota Bagian Multimedia - Ariel Ardinnansyah" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -185,7 +185,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota6Img} 
+              src={anggotaMultimedia6Img} 
               alt="Anggota Bagian Multimedia - Muhammad Jazuli" 
               className="w-full h-full object-cover object-[center_35%]"
             />
@@ -210,7 +210,7 @@ export function MultimediaSection() {
         >
           <div className="relative h-72 bg-gradient-to-br from-purple-700 to-purple-800 overflow-hidden">
             <img 
-              src={anggota7Img} 
+              src={anggotaMultimedia7Img} 
               alt="Anggota Bagian Multimedia - Muhammad Ihsanul Fikri" 
               className="w-full h-full object-cover object-[center_35%]"
             />

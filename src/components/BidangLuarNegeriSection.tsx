@@ -1,15 +1,21 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
 import { Button } from "./ui/button";
+import kepalaLuarNegeri from "../assets/LUGRI-01.png";
+import wakilKepalaLuarNegeri from "../assets/LUGRI-02.png";
+import sekretarisLuarNegeri from "../assets/LUGRI-03.png";
+import anggotaLuarNegeri1 from "../assets/LUGRI-04.png";// Add appropriate image paths
+import anggotaLuarNegeri2 from "../assets/LUGRI-05.png";// Add appropriate image paths
+import anggotaLuarNegeri3 from "../assets/LUGRI-06.png";// Add appropriate image paths
 
 export function BidangLuarNegeriSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG LUAR NEGERI" },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG LUAR NEGERI" },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG LUAR NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI" },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI" },
+    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG LUAR NEGERI", img: kepalaLuarNegeri },
+    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG LUAR NEGERI", img: wakilKepalaLuarNegeri },
+    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG LUAR NEGERI", img: sekretarisLuarNegeri },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri1 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri2 },
+    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri3 },
   ];
 
   return (
@@ -36,7 +42,11 @@ export function BidangLuarNegeriSection() {
             className="bg-gradient-to-br from-indigo-800 to-indigo-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
             <div className="relative h-80 bg-gradient-to-br from-indigo-700 to-indigo-800 flex items-center justify-center">
-              <Users className="w-24 h-24 text-indigo-300 opacity-50" />
+              <img
+                src={person.img}
+                alt={person.nama}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
             <div className="p-6 text-center">
               <p className="text-indigo-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>

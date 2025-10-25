@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { Eye, MessageSquare, HandshakeIcon, Settings, FileText, CheckCircle2 } from "lucide-react";
-import ketuaUmumImg from "figma:asset/23d8731d324b2522d6c746142f020a8e611d7598.png";
-import wakilKetuaImg from "figma:asset/82ca0e30e30c475f7fd1d8cf63ec5cc1a39d4b30.png";
-import sekretarisUmum1Img from "figma:asset/217bf79976dd39bb1f5763be78f19fb33af95b9b.png";
-import sekretarisUmum2Img from "figma:asset/cb2a1326928a448cd036b5c60e90e7b6358dc7e4.png";
-import bendaharaUmum1Img from "figma:asset/83f20bc82cfeb8542e57d1803e54323282d12bac.png";
-import bendaharaUmum2Img from "figma:asset/4bc36b2121f7c7fbf1e3c6017c399b0e0567633d.png";
+import ketuaUmumImg from "../assets/BPH-01.png";
+import wakilKetuaImg from "../assets/BPH-02.png";
+import sekretarisUmum1Img from "../assets/BPH-03.png";
+import sekretarisUmum2Img from "../assets/BPH-04.png"; 
+import bendaharaUmum1Img from "../assets/BPH-05.png"; 
+import bendaharaUmum2Img from "../assets/BPH-06.png";
 
 export function BPHSection() {
   return (
