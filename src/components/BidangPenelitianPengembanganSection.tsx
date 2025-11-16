@@ -12,12 +12,12 @@ import anggotaPenelitianPengembangan3 from "../assets/LITBANG-06.png";
 
 export function BidangPenelitianPengembanganSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG PENELITIAN & PENGEMBANGAN", img: kepalaPenelitianPengembangan },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG PENELITIAN & PENGEMBANGAN", img: wakilKepalaPenelitianPengembangan },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG PENELITIAN & PENGEMBANGAN", img: sekretarisPenelitianPengembangan },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan1 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan2 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG PENELITIAN & PENGEMBANGAN", img: anggotaPenelitianPengembangan3 },
+    { nama: "Sains Data'23", jabatan: "Program Studi", img: kepalaPenelitianPengembangan },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: wakilKepalaPenelitianPengembangan },
+    { nama: "Sains Data'23", jabatan: "Program Studi", img: sekretarisPenelitianPengembangan },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: anggotaPenelitianPengembangan1 },
+    { nama: "Sistem Informasi'24", jabatan: "Program Studi", img: anggotaPenelitianPengembangan2 },
+    { nama: "Informatika'24", jabatan: "Program Studi", img: anggotaPenelitianPengembangan3 },
   ];
 
   return (
@@ -47,7 +47,7 @@ export function BidangPenelitianPengembanganSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />
             </div>
             <div className="p-6 text-center">

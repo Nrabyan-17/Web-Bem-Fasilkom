@@ -39,10 +39,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KETUA UMUM
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Faiza Akmal Zaidaan
+              Sistem Informasi'22
             </p>
           </div>
         </motion.div>
@@ -64,10 +64,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              WAKIL KETUA UMUM
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Nashruddin Nur Fadilah
+              Informatika'22
             </p>
           </div>
         </motion.div>
@@ -89,10 +89,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS UMUM 1
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Jacinda Ardina Gestyaki
+              Sains Data'23
             </p>
           </div>
         </motion.div>
@@ -114,10 +114,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS UMUM 2
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Shafa Sabrina Almas
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>
@@ -139,10 +139,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              BENDAHARA UMUM 1
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Amriza Saskirana I.H.P
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>
@@ -164,10 +164,10 @@ export function BPHSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-500 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              BENDAHARA UMUM 2
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Belinda Ingridina
+              Sistem Informasi'22
             </p>
           </div>
         </motion.div>

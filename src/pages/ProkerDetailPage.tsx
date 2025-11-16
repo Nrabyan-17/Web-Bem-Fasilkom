@@ -72,7 +72,7 @@ export function ProkerDetailPage() {
               className="bg-white rounded-2xl shadow-xl overflow-hidden"
             >
               {/* Featured Image */}
-              <div className="relative h-96 overflow-hidden">
+              <div className="relative h-[-97] overflow-hidden">
                 <ImageWithFallback
                   src={proker.image}
                   alt={proker.title}
@@ -167,14 +167,13 @@ export function ProkerDetailPage() {
                   </h2>
                   <div className="prose prose-lg max-w-none">
                     <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
-                      {proker.description}
+                      {proker.detailedDescription || proker.description}
                     </p>
-                    <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
-                      Program kerja ini merupakan salah satu program unggulan dari BEM FASILKOM UPNVJT dalam kategori <span className="text-orange-600" style={{ fontWeight: 600 }}>{proker.category}</span>. Program ini dirancang untuk memberikan kontribusi maksimal kepada mahasiswa dan masyarakat sekitar.
-                    </p>
-                    <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
-                      Melalui program ini, diharapkan mahasiswa dapat mengembangkan potensi diri baik dari segi akademik maupun non-akademik, serta dapat memberikan dampak positif bagi lingkungan sekitar sesuai dengan visi dan misi BEM FASILKOM.
-                    </p>
+                    
+                      <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
+                        {proker.additionalParagraph}
+                      </p>
+
                   </div>
                 </motion.div>
 

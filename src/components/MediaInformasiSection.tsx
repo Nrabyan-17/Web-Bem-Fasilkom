@@ -87,10 +87,10 @@ export function MediaInformasiSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS BIRO
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Salma Queena Panditawulan
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>

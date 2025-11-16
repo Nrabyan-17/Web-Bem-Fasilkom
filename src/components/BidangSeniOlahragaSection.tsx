@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import { Button } from "./ui/button";
 import kepalaBidangSenor from "../assets/SENOR-01.png";
 import wakilBidangSenor from "../assets/SENOR-02.png";
 import sekreBidangSenor from "../assets/SENOR-03.png";
@@ -40,10 +41,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KEPALA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Kepala Bidang]
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -65,10 +66,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              WAKIL KEPALA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Wakil Kepala Bidang]
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -90,10 +91,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Sekretaris Bidang]
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>
@@ -115,10 +116,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Anggota Bidang 1]
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -140,10 +141,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Anggota Bidang 2]
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -165,10 +166,10 @@ export function BidangSeniOlahragaSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              [Nama Anggota Bidang 3]
+              Informatika'24
             </p>
           </div>
         </motion.div>
@@ -201,13 +202,15 @@ export function BidangSeniOlahragaSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center"
+          className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200 flex flex-col items-center justify-center gap-3"
         >
-          <h4 className="text-white text-center mb-4" style={{ fontSize: "18px", fontWeight: 700 }}>
+          <h4 className="text-orange-600 text-center mb-2" style={{ fontSize: "18px", fontWeight: 700 }}>
             Program Kerja
           </h4>
-          <div className="bg-white text-blue-600 px-6 py-3 rounded-lg shadow-md" style={{ fontSize: "16px", fontWeight: 700 }}>
-            FASILKOM SPORT FEST
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Fasilkom Fest
+            </Button>
           </div>
         </motion.div>
       </div>

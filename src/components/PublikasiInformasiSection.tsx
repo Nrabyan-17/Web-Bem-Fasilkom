@@ -19,7 +19,7 @@ export function PublikasiInformasiSection() {
       className="mb-16"
     >
       <h3 className="text-blue-500 text-center mb-8" style={{ fontSize: "24px", fontWeight: 700 }}>
-        Bagian Publikasi Informasi
+        Bagian Publikasi & Informasi
       </h3>
 
       {/* Team Cards Grid - First Row (3 Members) */}
@@ -41,10 +41,10 @@ export function PublikasiInformasiSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KEPALA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Ishna Shetia Shahadatina
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>
@@ -66,10 +66,10 @@ export function PublikasiInformasiSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Tasya Kalimarensyia Br Sinaga
+              Informatika'24
             </p>
           </div>
         </motion.div>
@@ -91,10 +91,10 @@ export function PublikasiInformasiSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-orange-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Ester Blessia Tumanggor
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -120,10 +120,10 @@ export function PublikasiInformasiSection() {
             </div>
             <div className="p-6 text-center">
               <p className="text-orange-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-                ANGGOTA BAGIAN
+                Program Studi
               </p>
               <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-                Cindy Auliya Lisaillin
+                Sistem Informasi'24
               </p>
             </div>
           </motion.div>
@@ -145,10 +145,10 @@ export function PublikasiInformasiSection() {
             </div>
             <div className="p-6 text-center">
               <p className="text-orange-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-                ANGGOTA BAGIAN
+                Program Studi
               </p>
               <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-                Elmy Gita Damayanti
+                Sistem Informasi'24
               </p>
             </div>
           </motion.div>

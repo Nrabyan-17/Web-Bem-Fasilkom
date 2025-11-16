@@ -6,9 +6,9 @@ import sekretarisPengembanganSdm from "../assets/PSDM-03.png";
 
 export function DepartemenPengembanganSDMSection() {
   const pengurus = [
-    { nama: "Muhammad Reza Putra Prasetyo", jabatan: "WAKIL KEPALA DEPARTEMEN PENGEMBANGAN SDM", img: wakilKepalaPengembanganSdm },
-    { nama: "Dinda Aisa Selvira", jabatan: "KEPALA DEPARTEMEN PENGEMBANGAN SDM", img: kepalaPengembanganSdm },
-    { nama: "Muhammad Hilmi Arya Rafa", jabatan: "SEKRETARIS DEPARTEMEN PENGEMBANGAN SDM", img: sekretarisPengembanganSdm },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: wakilKepalaPengembanganSdm },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: kepalaPengembanganSdm },
+    { nama: "Sistem Informasi'22", jabatan: "Program Studi", img: sekretarisPengembanganSdm },
   ];
 
   return (
@@ -38,7 +38,7 @@ export function DepartemenPengembanganSDMSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />  
             </div>
             <div className="p-6 text-center">

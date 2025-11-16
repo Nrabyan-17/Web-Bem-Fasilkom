@@ -24,7 +24,7 @@ export function NewsSection() {
         >
           <div className="inline-block">
             <h2 className="text-orange-500 mb-2" style={{ fontSize: "40px", fontWeight: 700 }}>
-              BERITA TERBARU
+              BERITA FASILKOM
             </h2>
             <motion.div
               initial={{ width: 0 }}

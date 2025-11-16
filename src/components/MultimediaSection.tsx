@@ -37,15 +37,15 @@ export function MultimediaSection() {
             <img 
               src={kepalaBagianMultimediaImg} 
               alt="Kepala Bagian Multimedia - Rachmananta Ibnu Fajar" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              KEPALA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Rachmananta Ibnu Fajar
+              Informatika'22
             </p>
           </div>
         </motion.div>
@@ -62,15 +62,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia1Img} 
               alt="Anggota Bagian Multimedia - Adi Bayu Saputra" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Adi Bayu Saputra
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -87,15 +87,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia2Img} 
               alt="Anggota Bagian Multimedia - Febbyna Aulia Putri" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Febbyna Aulia Putri
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -112,15 +112,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia3Img} 
               alt="Anggota Bagian Multimedia - Marsyanda Firlyandita" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Marsyanda Firlyandita
+              Sistem Informasi'23
             </p>
           </div>
         </motion.div>
@@ -137,15 +137,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia4Img} 
               alt="Anggota Bagian Multimedia - Disain Ariesta Perdana Raharja" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Disain Ariesta Perdana Raharja
+              Informatika'24
             </p>
           </div>
         </motion.div>
@@ -162,15 +162,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia5Img} 
               alt="Anggota Bagian Multimedia - Ariel Ardinnansyah" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Ariel Ardinnansyah
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -187,15 +187,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia6Img} 
               alt="Anggota Bagian Multimedia - Muhammad Jazuli" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Muhammad Jazuli
+              Sains data'24
             </p>
           </div>
         </motion.div>
@@ -212,15 +212,15 @@ export function MultimediaSection() {
             <img 
               src={anggotaMultimedia7Img} 
               alt="Anggota Bagian Multimedia - Muhammad Ihsanul Fikri" 
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_45%]"
             />
           </div>
           <div className="p-4 text-center">
             <p className="text-purple-300 mb-1" style={{ fontSize: "12px", fontWeight: 600 }}>
-              ANGGOTA BAGIAN
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Muhammad Ihsanul Fikri
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>

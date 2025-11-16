@@ -39,10 +39,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              KEPALA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Akmal Faiz Firmansyah
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -64,10 +64,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              WAKIL KEPALA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Agung Aji Estu Aji
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -89,10 +89,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              SEKRETARIS BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Sifa Dwi Afiani
+              Informatika'23
             </p>
           </div>
         </motion.div>
@@ -114,10 +114,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Azizah Nur Fitria
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -139,10 +139,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              M. Haikal Ihsan
+              Sistem Informasi'24
             </p>
           </div>
         </motion.div>
@@ -164,10 +164,10 @@ export function BidangPengmasSection() {
           </div>
           <div className="p-6 text-center">
             <p className="text-blue-300 mb-2" style={{ fontSize: "14px", fontWeight: 600 }}>
-              ANGGOTA BIDANG
+              Program Studi
             </p>
             <p className="text-white" style={{ fontSize: "16px", fontWeight: 700 }}>
-              Rizky Firmansyah
+              Sains Data'24
             </p>
           </div>
         </motion.div>
@@ -197,20 +197,20 @@ export function BidangPengmasSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center"
+          className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center"
         >
           <h4 className="text-white text-center mb-4" style={{ fontSize: "18px", fontWeight: 700 }}>
             Program Kerja
           </h4>
           <div className="flex flex-wrap gap-3 justify-center">
-            <div className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow-md" style={{ fontSize: "14px", fontWeight: 700 }}>
+            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
               Donor Darah
             </div>
-            <div className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow-md" style={{ fontSize: "14px", fontWeight: 700 }}>
+            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
               Aksi Desa
             </div>
-            <div className="bg-white text-blue-600 px-4 py-2 rounded-lg shadow-md" style={{ fontSize: "14px", fontWeight: 700 }}>
-              FASILKOM Goes To School
+            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
+              FASILKOM CAMP
             </div>
           </div>
         </motion.div>

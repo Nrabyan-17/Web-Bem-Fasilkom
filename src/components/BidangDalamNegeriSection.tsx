@@ -10,12 +10,12 @@ import anggotaDagri3 from "../assets/DAGRI-06.png";
 
 export function BidangDalamNegeriSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG DALAM NEGERI", img: kepalaDagri },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG DALAM NEGERI", img: wakilKepalaDagri },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG DALAM NEGERI", img: sekretarisDagri },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri1 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri2 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG DALAM NEGERI", img: anggotaDagri3 },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: kepalaDagri },
+    { nama: "Informatika'23", jabatan: "Program Studi", img: wakilKepalaDagri },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: sekretarisDagri },
+    { nama: "Sains Data'24", jabatan: "Program Studi", img: anggotaDagri1 },
+    { nama: "Informatika'24", jabatan: "Program Studi", img: anggotaDagri2 },
+    { nama: "Sistem Informasi'24", jabatan: "Program Studi", img: anggotaDagri3 },
   ];
 
   return (
@@ -45,7 +45,7 @@ export function BidangDalamNegeriSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />
             </div>
             <div className="p-6 text-center">
@@ -93,7 +93,7 @@ export function BidangDalamNegeriSection() {
           </h4>
           <div className="flex flex-wrap justify-center gap-3">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
-              DIES NATALIS
+              DIES NATALIS FASILKOM 2025
             </Button>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
               Internalisasi ORMAWA

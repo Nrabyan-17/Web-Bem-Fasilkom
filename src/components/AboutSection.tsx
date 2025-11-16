@@ -82,7 +82,7 @@ export function AboutSection() {
           >
             <motion.div
               animate={{ 
-                rotate: [0, 5, -5, 0],
+                rotate: [0, 0, 0, 0],
               }}
               transition={{ 
                 duration: 6,

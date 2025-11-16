@@ -1,27 +1,69 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Loader2 } from "lucide-react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { prokerData, ProkerItem } from "../data/prokerData";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { SearchSuggestions } from "../components/SearchSuggestions";
+
 
 export function ProgramKerjaPage() {
-  const [activeFilter, setActiveFilter] = useState<"Semua" | "Pelayanan" | "Pengembangan" | "Segara" | "Refleksi">("Semua");
+  const [activeFilter, setActiveFilter] = useState<"Semua" | "Pelayanan" | "Pengembangan" | "Segera" | "Selesai" | "Refleksi">("Semua");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [searchInputFocused, setSearchInputFocused] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const filters: Array<"Semua" | "Pelayanan" | "Pengembangan" | "Segara" | "Refleksi"> = [
+  const filters: Array<"Semua" | "Pelayanan" | "Pengembangan" | "Segera" | "Selesai" | "Refleksi"> = [
     "Semua",
     "Pelayanan",
-    "Segara",
+    "Pengembangan",
+    "Segera", 
+    "Selesai",
     "Refleksi",
   ];
+
+  // Get search suggestions
+  const getSuggestions = (query: string): ProkerItem[] => {
+    if (!query || query.length < 2) return [];
+    
+    return prokerData.filter((item) => {
+      const matchesTitle = item.title.toLowerCase().includes(query.toLowerCase());
+      const matchesDescription = item.description.toLowerCase().includes(query.toLowerCase());
+      const matchesCategory = item.category.toLowerCase().includes(query.toLowerCase());
+      return matchesTitle || matchesDescription || matchesCategory;
+    }).slice(0, 5); // Limit to 5 suggestions
+  };
+
+  const suggestions = getSuggestions(searchQuery);
+
+  // Handle search input change
+  const handleSearchChange = (e: any) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    setShowSuggestions(value.length >= 2 && searchInputFocused);
+  };
+
+  // Handle suggestion click
+  const handleSuggestionClick = (suggestion: ProkerItem) => {
+    setSearchQuery(suggestion.title);
+    setShowSuggestions(false);
+    setSearchInputFocused(false);
+  };
+
+  // Handle clear search
+  const handleClearSearch = () => {
+    setSearchQuery("");
+    setShowSuggestions(false);
+  };
 
   // Filter berdasarkan kategori dan pencarian
   const filteredProker = prokerData.filter((item) => {
@@ -30,6 +72,9 @@ export function ProgramKerjaPage() {
         item.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Limit tampilan program kerja
+  const displayedProker = showAll ? filteredProker : filteredProker.slice(0, 6);
 
   return (
     <div className="min-h-screen bg-white">
@@ -74,17 +119,42 @@ export function ProgramKerjaPage() {
           >
             {/* Search Bar - Lebih Panjang */}
             <div className="relative flex-1 max-w-2xl w-full">
-              <div className="absolute inset-y-0 pl-4 flex items-center pointer-events-none">
-                <AiOutlineSearch size={20} color="#9CA3AF" />
+              <div className="relative w-full">
+                <input
+                  type="text"
+                  placeholder="Cari program kerja..."
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  onFocus={() => {
+                    setSearchInputFocused(true);
+                    if (searchQuery.length >= 2) {
+                      setShowSuggestions(true);
+                    }
+                  }}
+                  onBlur={() => {
+                    // Delay to allow suggestion click
+                    setTimeout(() => {
+                      setSearchInputFocused(false);
+                      setShowSuggestions(false);
+                    }, 200);
+                  }}
+                  className="w-full pl-4 pr-10 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-orange-500 transition-colors duration-300"
+                  style={{ fontSize: "14px", paddingLeft: "15px" }}
+                />
+                {/* <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <AiOutlineSearch size={20} color="#9CA3AF" />
+                </div> */}
+                
+                {/* Search Suggestions */}
+                <SearchSuggestions
+                  searchQuery={searchQuery}
+                  suggestions={suggestions}
+                  onSuggestionClick={handleSuggestionClick}
+                  onClearSearch={handleClearSearch}
+                  isVisible={showSuggestions && suggestions.length > 0}
+                  maxSuggestions={5}
+                />
               </div>
-              <input
-                type="text"
-                placeholder="Cari program kerja..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-orange-500 transition-colors duration-300"
-                style={{ fontSize: "14px", paddingLeft: "27px" }}
-              />
             </div>
 
             {/* Category Dropdown - Di sebelah kanan */}
@@ -100,33 +170,35 @@ export function ProgramKerjaPage() {
               </button>
 
               {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50"
-                >
-                  {filters.map((filter) => (
-                    <button
-                      key={filter}
-                      onClick={() => {
-                        setActiveFilter(filter);
-                        setIsDropdownOpen(false);
-                      }}
-                      className={`w-full text-left px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0 ${
-                        activeFilter === filter
-                          ? "bg-orange-50 text-orange-600"
-                          : "hover:bg-gray-50 text-gray-700"
-                      }`}
-                      style={{ fontSize: "14px" }}
-                    >
-                      {filter}
-                    </button>
-                  ))}
-                </motion.div>
-              )}
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50"
+                  >
+                    {filters.map((filter) => (
+                      <button
+                        key={filter}
+                        onClick={() => {
+                          setActiveFilter(filter);
+                          setIsDropdownOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0 ${
+                          activeFilter === filter
+                            ? "bg-orange-50 text-orange-600"
+                            : "hover:bg-gray-50 text-gray-700"
+                        }`}
+                        style={{ fontSize: "14px" }}
+                      >
+                        {filter}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
 
@@ -138,7 +210,7 @@ export function ProgramKerjaPage() {
             className="text-center mt-6"
           >
             <p className="text-gray-600 pt-4" style={{ fontSize: "14px" }}>
-              Menampilkan {filteredProker.length} program kerja
+              Menampilkan {displayedProker.length} dari {filteredProker.length} program kerja
               {searchQuery && ` untuk pencarian "${searchQuery}"`}
               {activeFilter !== "Semua" && ` dalam kategori "${activeFilter}"`}
             </p>
@@ -155,7 +227,7 @@ export function ProgramKerjaPage() {
             transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
           >
-            {filteredProker.map((item, index) => (
+            {displayedProker.map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -201,6 +273,55 @@ export function ProgramKerjaPage() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Tombol Lihat Program Kerja Lainnya */}
+          {!showAll && filteredProker.length > 6 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center mt-12"
+            >
+              <motion.div
+                whileHover={!isLoading ? { scale: 1.05 } : {}}
+                whileTap={!isLoading ? { scale: 0.95 } : {}}
+              >
+                <Button
+                  onClick={() => {
+                    setIsLoading(true);
+                    setTimeout(() => {
+                      setShowAll(true);
+                      setIsLoading(false);
+                    }, 1000);
+                  }}
+                  disabled={isLoading}
+                  className="bg-orange-500 text-white hover:bg-orange-600 transition-all duration-300 px-8 py-6 rounded-lg shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
+                  style={{ fontSize: "14px", fontWeight: 600 }}
+                >
+                  <span className="flex items-center justify-center">
+                    {isLoading ? (
+                      <>
+                        <motion.div
+                          animate={{ 
+                            rotate: 360
+                          }}
+                          transition={{
+                            rotate: { duration: 1, repeat: Infinity, ease: "linear" }
+                          }}
+                          className="mr-2"
+                        >
+                          <Loader2 className="h-5 w-5" />
+                        </motion.div>
+                        <span>Memuat...</span>
+                      </>
+                    ) : (
+                      "Lihat program kerja lainnya"
+                    )}
+                  </span>
+                </Button>
+              </motion.div>
+            </motion.div>
+          )}
 
           {filteredProker.length === 0 && (
             <motion.div

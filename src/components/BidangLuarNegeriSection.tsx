@@ -10,12 +10,12 @@ import anggotaLuarNegeri3 from "../assets/LUGRI-06.png";// Add appropriate image
 
 export function BidangLuarNegeriSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG LUAR NEGERI", img: kepalaLuarNegeri },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG LUAR NEGERI", img: wakilKepalaLuarNegeri },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG LUAR NEGERI", img: sekretarisLuarNegeri },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri1 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri2 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG LUAR NEGERI", img: anggotaLuarNegeri3 },
+    { nama: "Informatika'22", jabatan: "Program Studi", img: kepalaLuarNegeri },
+    { nama: "Sistem Informasi'24", jabatan: "Program Studi", img: wakilKepalaLuarNegeri },
+    { nama: "Informatika'23", jabatan: "Program Studi", img: sekretarisLuarNegeri },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: anggotaLuarNegeri1 },
+    { nama: "Sains Data'24", jabatan: "Program Studi", img: anggotaLuarNegeri2 },
+    { nama: "Informatika'24", jabatan: "Program Studi", img: anggotaLuarNegeri3 },
   ];
 
   return (
@@ -45,7 +45,7 @@ export function BidangLuarNegeriSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />
             </div>
             <div className="p-6 text-center">
@@ -99,7 +99,7 @@ export function BidangLuarNegeriSection() {
               Company Visit
             </Button>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
-              PEMILU-JK
+              FKBM-IK 2025
             </Button>
           </div>
         </motion.div>

@@ -220,7 +220,7 @@ export function ContactPage() {
             <Card className="overflow-hidden shadow-xl border-0">
               <div className="relative w-full h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.238775894373!2d112.78217731477573!3d-7.327899894692537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7faf3c0e6c5e5%3A0x27b146e81f6d8d3e!2sUniversitas%20Pembangunan%20Nasional%20Veteran%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1644910000000!5m2!1sen!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15828.69158000597!2d112.77349023725601!3d-7.334471142506275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab8185713b7%3A0x384fa5c9e0c009e1!2sSekretariat%20BEM%20FIK%20UPN%20%22Veteran%22%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1762017011124!5m2!1sid!2sid" 
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

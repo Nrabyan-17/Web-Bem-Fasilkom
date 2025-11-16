@@ -6,9 +6,9 @@ import sekretarisDepartemenImg from "../assets/HDK-03.png";
 
 export function DepartemenHubunganKerjasamaSection() {
   const pengurus = [
-    { nama: "Wakil Kepala Departemen", jabatan: "WAKIL KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA", img: wakilKetuaHdkImg },
-    { nama: "Kepala Departemen", jabatan: "KEPALA DEPARTEMEN HUBUNGAN & KERJASAMA", img: ketuaHdkImg },
-    { nama: "Sekretaris Departemen", jabatan: "SEKRETARIS DEPARTEMEN HUBUNGAN & KERJASAMA", img: sekretarisDepartemenImg },
+    { nama: "Informatika'22", jabatan: "Program Studi", img: wakilKetuaHdkImg },
+    { nama: "Informatika'22", jabatan: "Program Studi", img: ketuaHdkImg },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: sekretarisDepartemenImg },
   ];
 
   return (
@@ -39,7 +39,7 @@ export function DepartemenHubunganKerjasamaSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />  
             </div>
             <div className="p-6 text-center">

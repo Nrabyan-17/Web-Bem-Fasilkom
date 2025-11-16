@@ -8,6 +8,7 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import { SiTiktok } from "react-icons/si";
 import logoImage  from "../assets/bem.png";
 
 
@@ -26,7 +27,7 @@ export function Footer() {
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    
+    { icon: SiTiktok, href: "#", label: "TikTok" },
   ];
 
   return (
@@ -78,7 +79,11 @@ export function Footer() {
                   className="w-10 h-10 rounded-lg bg-blue-700 hover:bg-orange-500 flex items-center justify-center transition-colors duration-300"
                   aria-label={social.label}
                 >
-                  <social.icon className="h-5 w-5" />
+                  {social.label === "TikTok" ? (
+                    <social.icon className="h-5 w-5" style={{ fontSize: 20 }} />
+                  ) : (
+                    <social.icon className="h-5 w-5" />
+                  )}
                 </motion.a>
               ))}
             </div>

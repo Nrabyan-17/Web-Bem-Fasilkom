@@ -11,12 +11,12 @@ import anggotaKaderisasi3 from "../assets/KADERISASI-06.png";
 
 export function BidangKaderisasiSection() {
   const pengurus = [
-    { nama: "Kepala Bidang", jabatan: "KEPALA BIDANG KADERISASI", img: kepalaKaderisasi },
-    { nama: "Wakil Kepala Bidang", jabatan: "WAKIL KEPALA BIDANG KADERISASI", img: wakilKepalaKaderisasi },
-    { nama: "Sekretaris Bidang", jabatan: "SEKRETARIS BIDANG KADERISASI", img: sekretarisKaderisasi },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi1 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi2 },
-    { nama: "Anggota Bidang", jabatan: "ANGGOTA BIDANG KADERISASI", img: anggotaKaderisasi3 },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: kepalaKaderisasi },
+    { nama: "Sistem Informasi'23", jabatan: "Program Studi", img: wakilKepalaKaderisasi },
+    { nama: "Informatika'23", jabatan: "Program Studi", img: sekretarisKaderisasi },
+    { nama: "Sains Data'24", jabatan: "Program Studi", img: anggotaKaderisasi1 },
+    { nama: "Sistem Informasi'24", jabatan: "Program Studi", img: anggotaKaderisasi2 },
+    { nama: "Sistem Informasi'24", jabatan: "Program Studi", img: anggotaKaderisasi3 },
   ];
 
   return (
@@ -46,7 +46,7 @@ export function BidangKaderisasiSection() {
               <img
                 src={person.img}
                 alt={person.nama}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
               />
             </div>
             <div className="p-6 text-center">
@@ -95,13 +95,13 @@ export function BidangKaderisasiSection() {
           </h4>
           <div className="flex flex-wrap justify-center gap-3">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
-              MEGAME
+              Mosaik
             </Button>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
-              DMUN - ID
+              LKMM-TD
             </Button>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
-              CONNECTION DAY
+              Confest
             </Button>
           </div>
         </motion.div>
