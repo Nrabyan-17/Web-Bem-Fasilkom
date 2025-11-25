@@ -37,7 +37,7 @@ export function ProgramKerjaPage() {
     
     return prokerData.filter((item) => {
       const matchesTitle = item.title.toLowerCase().includes(query.toLowerCase());
-      const matchesDescription = item.description.toLowerCase().includes(query.toLowerCase());
+      const matchesDescription = item.excerpt.toLowerCase().includes(query.toLowerCase());
       const matchesCategory = item.category.toLowerCase().includes(query.toLowerCase());
       return matchesTitle || matchesDescription || matchesCategory;
     }).slice(0, 5); // Limit to 5 suggestions
@@ -69,7 +69,7 @@ export function ProgramKerjaPage() {
   const filteredProker = prokerData.filter((item) => {
     const matchesCategory = activeFilter === "Semua" || item.category === activeFilter;
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase());
+        item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -258,7 +258,7 @@ export function ProgramKerjaPage() {
                   </CardHeader>
                   <CardContent className="pt-0">
                     <p className="text-gray-600 mb-4 line-clamp-2" style={{ fontSize: "13px", lineHeight: "1.6" }}>
-                      {item.description}
+                      {item.excerpt}
                     </p>
                     <Link to={`/program-kerja/${item.id}`}>
                       <Button

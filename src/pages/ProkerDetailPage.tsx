@@ -6,7 +6,7 @@ import { Footer } from "../components/Footer";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { ArrowLeft, Calendar, MapPin, Users, Target } from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Users, Target, PenTool, FileText } from "lucide-react";
 import { prokerData } from "../data/prokerData";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
@@ -91,8 +91,9 @@ export function ProkerDetailPage() {
 
               {/* Content */}
               <div className="p-8 lg:p-12">
+
                 {/* Quick Info Cards */}
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -106,7 +107,7 @@ export function ProkerDetailPage() {
                           </div>
                           <div>
                             <p className="text-gray-500" style={{ fontSize: "12px" }}>Waktu Pelaksanaan</p>
-                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>Oktober 2025</p>
+                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>{proker.waktuPelaksanaan}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -125,8 +126,8 @@ export function ProkerDetailPage() {
                             <Users className="h-6 w-6 text-blue-600" />
                           </div>
                           <div>
-                            <p className="text-gray-500" style={{ fontSize: "12px" }}>Target Peserta</p>
-                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>200+ Mahasiswa</p>
+                            <p className="text-gray-500" style={{ fontSize: "12px" }}>Program Kerja bidang:</p>
+                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>{proker.bidang}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -138,15 +139,35 @@ export function ProkerDetailPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <Card className="border-l-4 border-l-green-500 bg-gradient-to-br from-green-50 to-white">
+                    <Card className="border-l-4 border-l-purple-500 bg-gradient-to-br from-purple-50 to-white">
                       <CardContent className="pt-6">
                         <div className="flex items-center gap-3">
-                          <div className="p-3 bg-green-100 rounded-full">
-                            <MapPin className="h-6 w-6 text-green-600" />
+                          <div className="p-3 bg-purple-100 rounded-full">
+                            <PenTool className="h-6 w-6 text-purple-600" />
                           </div>
                           <div>
-                            <p className="text-gray-500" style={{ fontSize: "12px" }}>Lokasi</p>
-                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>Fasilkom UPNVJT</p>
+                            <p className="text-gray-500" style={{ fontSize: "12px" }}>Penulis</p>
+                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>{proker.penulis}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Card className="border-l-4 border-l-cyan-500 bg-gradient-to-br from-cyan-50 to-white">
+                      <CardContent className="pt-6">
+                        <div className="flex items-center gap-3">
+                          <div className="p-3 bg-cyan-100 rounded-full">
+                            <FileText className="h-6 w-6 text-cyan-600" />
+                          </div>
+                          <div>
+                            <p className="text-gray-500" style={{ fontSize: "12px" }}>Dokumentasi</p>
+                            <p className="text-gray-900" style={{ fontSize: "16px", fontWeight: 600 }}>{proker.dokumentasi}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -165,16 +186,14 @@ export function ProkerDetailPage() {
                     <Target className="h-7 w-7 text-orange-500" />
                     Deskripsi Program
                   </h2>
-                  <div className="prose prose-lg max-w-none">
-                    <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
-                      {proker.detailedDescription || proker.description}
+                  {/* Full Content */}
+                <div className="prose prose-lg max-w-none">
+                  {proker.content.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="text-gray-700 mb-6 leading-relaxed" style={{ fontSize: "16px" }}>
+                      {paragraph}
                     </p>
-                    
-                      <p className="text-gray-700 mb-4 leading-relaxed" style={{ fontSize: "16px" }}>
-                        {proker.additionalParagraph}
-                      </p>
-
-                  </div>
+                  ))}
+                </div>
                 </motion.div>
 
                 {/* Objectives */}
@@ -264,7 +283,7 @@ export function ProkerDetailPage() {
                         </CardHeader>
                         <CardContent>
                           <p className="text-gray-600 line-clamp-2" style={{ fontSize: "14px" }}>
-                            {item.description}
+                            {item.excerpt}
                           </p>
                         </CardContent>
                       </Card>

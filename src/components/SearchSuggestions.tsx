@@ -1,12 +1,18 @@
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { AiOutlineSearch, AiOutlineArrowRight } from "react-icons/ai";
-import { ProkerItem } from "../data/prokerData";
+
+interface SuggestableItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+}
 
 interface SearchSuggestionsProps {
   searchQuery: string;
-  suggestions: ProkerItem[];
-  onSuggestionClick: (suggestion: ProkerItem) => void;
+  suggestions: SuggestableItem[];
+  onSuggestionClick: (suggestion: SuggestableItem) => void;
   onClearSearch: () => void;
   isVisible: boolean;
   maxSuggestions?: number;
@@ -35,7 +41,7 @@ export function SearchSuggestions({
       switch (e.key) {
         case "ArrowDown":
           e.preventDefault();
-          setSelectedIndex(prev => 
+          setSelectedIndex(prev =>
             prev < Math.min(suggestions.length, maxSuggestions) - 1 ? prev + 1 : prev
           );
           break;
@@ -69,11 +75,11 @@ export function SearchSuggestions({
   // Highlight matching text
   const highlightMatch = (text: string, query: string) => {
     if (!query) return text;
-    
+
     const regex = new RegExp(`(${query})`, 'gi');
     const parts = text.split(regex);
-    
-    return parts.map((part, index) => 
+
+    return parts.map((part, index) =>
       regex.test(part) ? (
         <span key={index} className="bg-orange-100 text-orange-600 font-semibold">
           {part}
@@ -91,7 +97,8 @@ export function SearchSuggestions({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: -10, scale: 0.95 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 overflow-hidden"
+        className="absolute left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-xl z-50 overflow-hidden"
+        style={{ top: "60px" }}
       >
         {/* Header */}
         <div className="px-4 py-3 bg-gray-50 border-b border-gray-100">
@@ -115,9 +122,8 @@ export function SearchSuggestions({
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
               onClick={() => onSuggestionClick(suggestion)}
-              className={`w-full text-left px-4 py-3 transition-all duration-200 border-b border-gray-50 last:border-b-0 group hover:bg-orange-50 ${
-                selectedIndex === index ? "bg-orange-50 border-orange-100" : ""
-              }`}
+              className={`w-full text-left px-4 py-3 transition-all duration-200 border-b border-gray-50 last:border-b-0 group hover:bg-orange-50 ${selectedIndex === index ? "bg-orange-50 border-orange-100" : ""
+                }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
@@ -138,7 +144,7 @@ export function SearchSuggestions({
                         {highlightMatch(suggestion.title, searchQuery)}
                       </h4>
                       <p className="text-xs text-gray-500 mt-1 line-clamp-1">
-                        {highlightMatch(suggestion.description, searchQuery)}
+                        {highlightMatch(suggestion.excerpt, searchQuery)}
                       </p>
                       <div className="flex items-center gap-2 mt-1">
                         <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full">

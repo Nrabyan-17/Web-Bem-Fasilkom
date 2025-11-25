@@ -28,7 +28,7 @@ export function Navbar() {
     { name: "Beranda", href: "/" },
     { name: "Berita", href: "/berita" },
     { name: "Struktur Organisasi", href: "/struktur-organisasi" },
-    { name: "Hubungi Kami", href: "/hubungi-kami" },
+    { name: "Advo Center", href: "/advo-center" },
   ];
 
   return (

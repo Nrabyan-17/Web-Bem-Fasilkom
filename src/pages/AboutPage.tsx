@@ -59,7 +59,7 @@ export function AboutPage() {
       name: "Linkedin",
       handle: "@Bem Fasilkom Upnjatim",
       color: "from-blue-700 to-blue-800",
-      link: "https://linkedin.com/company/bemfasilkom",
+      link: "https://www.linkedin.com/company/bem-fakultas-ilmu-komputer-upn-veteran-jawa-timur/",
     },
   ];
 

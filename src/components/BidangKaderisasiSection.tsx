@@ -61,9 +61,8 @@ export function BidangKaderisasiSection() {
         ))}
       </div>
 
-      {/* Tupoksi & Program Kerja */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-        {/* Tupoksi */}
+      {/* Tupoksi & Program Kerja & Agenda */}
+      <div className="mt-8 mb-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -81,8 +80,9 @@ export function BidangKaderisasiSection() {
             bakat dan fokus ilmu Fasilkom mengembangkan bakat dan fokus ilmu computer UPN "Veteran" Jawa Timur.
           </p>
         </motion.div>
+      </div>
 
-        {/* Program Kerja */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -102,6 +102,22 @@ export function BidangKaderisasiSection() {
             </Button>
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
               Confest
+            </Button>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl p-6 border-2 border-violet-200 flex flex-col items-center justify-center gap-3"
+        >
+          <h4 className="text-violet-600 text-center mb-2" style={{ fontSize: "18px", fontWeight: 700 }}>
+            Agenda
+          </h4>
+         <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Pelatihan Pemandu
             </Button>
           </div>
         </motion.div>

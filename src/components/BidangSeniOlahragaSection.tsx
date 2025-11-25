@@ -175,9 +175,8 @@ export function BidangSeniOlahragaSection() {
         </motion.div>
       </div>
 
-      {/* Bottom Grid - Tupoksi and Program Kerja */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Tupoksi Section */}
+      {/* Bottom Grid - Tupoksi, Program Kerja, and Agenda */}
+      <div className="mt-8 mb-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,8 +194,9 @@ export function BidangSeniOlahragaSection() {
             mengekspresikan bakat dan minat mereka dalam bidang seni budaya dan olahraga.
           </p>
         </motion.div>
+      </div>
 
-        {/* Program Kerja Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -210,6 +210,31 @@ export function BidangSeniOlahragaSection() {
           <div className="flex flex-wrap justify-center gap-3">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
               Fasilkom Fest
+            </Button>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.9 }}
+          className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border-2 border-blue-200 flex flex-col items-center justify-center gap-3"
+        >
+          <h4 className="text-blue-600 text-center mb-2" style={{ fontSize: "18px", fontWeight: 700 }}>
+            Agenda
+          </h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Agenda Futsal
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Agenda Basket
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Agenda Badminton
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Agenda Band
             </Button>
           </div>
         </motion.div>

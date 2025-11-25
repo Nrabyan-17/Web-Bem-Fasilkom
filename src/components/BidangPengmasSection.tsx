@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
+import { Button } from "./ui/button";
 import kepalaPengmas from "../assets/PENGMAS-01.png";
 import wakilKepalaPengmas from "../assets/PENGMAS-02.png";
 import sekretarisPengmas from "../assets/PENGMAS-03.png";
@@ -173,9 +174,8 @@ export function BidangPengmasSection() {
         </motion.div>
       </div>
 
-      {/* Bottom Grid - Tupoksi and Program Kerja */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Tupoksi Section */}
+      {/* Bottom Grid - Tupoksi, Program Kerja, and Agenda */}
+      <div className="mt-8 mb-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -190,8 +190,9 @@ export function BidangPengmasSection() {
             Bertanggung jawab dalam melaksanakan kegiatan sosial dan kemasyarakatan serta pelayanan di kampus
           </p>
         </motion.div>
+      </div>
 
-        {/* Program Kerja Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -204,14 +205,30 @@ export function BidangPengmasSection() {
           </h4>
           <div className="flex flex-wrap gap-3 justify-center">
             <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Donor Darah
+              FASILKOM CAMP 2025
             </div>
-            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
-              Aksi Desa
-            </div>
-            <div className="bg-white text-orange-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontSize: "14px", fontWeight: 700 }}>
-              FASILKOM CAMP
-            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.9 }}
+          className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200 flex flex-col items-center justify-center gap-3"
+        >
+          <h4 className="text-orange-600 text-center mb-2" style={{ fontSize: "18px", fontWeight: 700 }}>
+            Agenda
+          </h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Sambang Liponsos
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Tanam Bibit Mangrove & Clean-Up
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Ecoaction Day
+            </Button>
           </div>
         </motion.div>
       </div>

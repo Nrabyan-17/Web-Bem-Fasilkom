@@ -174,9 +174,8 @@ export function BidangAdvokesmaSection() {
         </motion.div>
       </div>
 
-      {/* Bottom Grid - Tupoksi and Program Kerja */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Tupoksi Section */}
+      {/* Bottom Grid - Tupoksi, Program Kerja, and Agenda */}
+      <div className="mt-8 mb-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,8 +190,9 @@ export function BidangAdvokesmaSection() {
             Melakukan pendampingan kepada mahasiswa Fasilkom yang mampu permusyawaratan semaksimal bisa, akademik maupun non akademik, melakukan bantuan kepada mahasiswa Fasilkom dalam hal kampus, mengklarifikasi perundungan, menjalankan kajian untuk mahasiswa fasilkom, pergi ke rumah sakit apabila ada mahasiswa yang sedang sakit, melakukan aksi mahasiswa (Unjuk Rasa), hingga isu nasional untuk menyuarakan aspirasi bukan hanya demi kampus
           </p>
         </motion.div>
+      </div>
 
-        {/* Program Kerja Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -206,6 +206,37 @@ export function BidangAdvokesmaSection() {
           <div className="flex flex-wrap justify-center gap-3">
             <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
               Open Talk
+            </Button>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.9 }}
+          className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border-2 border-orange-200 flex flex-col items-center justify-center gap-3"
+        >
+          <h4 className="text-orange-600 text-center mb-2" style={{ fontSize: "18px", fontWeight: 700 }}>
+            Agenda
+          </h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Maba Mate
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Advo Call Center
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Crisis Center UKT
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Kabar Fasilkom
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Kabar Advo
+            </Button>
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
+              Kabar Beasiswa
             </Button>
           </div>
         </motion.div>

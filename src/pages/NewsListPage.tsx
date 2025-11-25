@@ -6,14 +6,39 @@ import { Footer } from "../components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
-import { Calendar, Loader2 } from "lucide-react";
+import { Calendar, Loader2, Search, Filter } from "lucide-react";
 import { newsData } from "../data/newsData";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { Input } from "../components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
+import { SearchSuggestions } from "../components/SearchSuggestions";
+import { useNavigate } from "react-router-dom";
 
 export function NewsListPage() {
   const [showAll, setShowAll] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
-  const displayedNews = showAll ? newsData : newsData.slice(0, 6);
+  const [searchQuery, setSearchQuery] = React.useState("");
+  const [category, setCategory] = React.useState("All News");
+  const [isSearchFocused, setIsSearchFocused] = React.useState(false);
+
+  const navigate = useNavigate();
+
+  const categories = React.useMemo(() => {
+    const unique = Array.from(new Set(newsData.map(n => n.category)));
+    return ["All News", ...unique];
+  }, []);
+
+  const filteredNews = React.useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return newsData.filter(item => {
+      const matchCategory = category === "All News" || item.category === category;
+      if (!q) return matchCategory;
+      const text = `${item.title} ${item.excerpt} ${item.content} ${item.category}`.toLowerCase();
+      return matchCategory && text.includes(q);
+    });
+  }, [searchQuery, category]);
+
+  const displayedNews = showAll ? filteredNews : filteredNews.slice(0, 6);
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -61,6 +86,59 @@ export function NewsListPage() {
                 transition={{ delay: 0.3, duration: 0.6 }}
                 className="h-1 bg-orange-500"
               />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-7xl mx-auto mb-10"
+          >
+            <div className="bg-white rounded-2xl shadow-md p-3 flex items-center gap-3 mb-8 relative">
+              <div className="flex-1 flex items-center gap-3 relative">
+                <Search className="w-5 h-5 text-gray-400" />
+                <Input
+                  value={searchQuery}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => setTimeout(() => setIsSearchFocused(false), 150)}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  placeholder="Search news by title, content, or category..."
+                  className="h-12 text-base rounded-lg bg-gray-100 border-gray-200 flex-1"
+                />
+                <SearchSuggestions
+                  searchQuery={searchQuery}
+                  suggestions={newsData.filter(n => {
+                    const q = searchQuery.trim().toLowerCase();
+                    if (!q) return false;
+                    const text = `${n.title} ${n.excerpt} ${n.content} ${n.category}`.toLowerCase();
+                    return text.includes(q);
+                  })}
+                  onSuggestionClick={(s) => navigate(`/berita/${s.id}`)}
+                  onClearSearch={() => setSearchQuery("")}
+                  isVisible={isSearchFocused && !!searchQuery.trim()}
+                  maxSuggestions={6}
+                />
+              </div>
+              <div className="w-56">
+                <Select value={category} onValueChange={setCategory}>
+                  <SelectTrigger className="h-12 rounded-lg">
+                    <SelectValue>
+                      <span className="flex items-center gap-2">
+                        <Filter className="w-4 h-4 text-gray-400" />
+                        <span>{category}</span>
+                      </span>
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    {categories.map(cat => (
+                      <SelectItem key={cat} value={cat}>
+                        {cat}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </motion.div>
 
@@ -114,7 +192,7 @@ export function NewsListPage() {
           </div>
 
           {/* Load More Button */}
-          {!showAll && newsData.length > 6 && (
+          {!showAll && filteredNews.length > 6 && (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
