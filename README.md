@@ -1,7 +1,7 @@
 
   # Website Organisasi Mahasiswa
 
-  This is a code bundle for Website Organisasi Mahasiswa. The original project is available at https://www.figma.com/design/UrYrnrDthBoSQszfbI1hSy/Website-Organisasi-Mahasiswa.
+  This is a code bundle for Website Organisasi Mahasiswa.
 
   ## Running the code
 
